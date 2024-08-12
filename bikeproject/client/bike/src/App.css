@@ -1,0 +1,34 @@
+.square-boxes-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.square-box {
+  border: 2px solid #ccc;
+  padding: 20px;
+  width: 30%;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.square-box h2 {
+  margin-top: 0;
+}
+
+.square-box .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.square-box .btn:hover {
+  background-color: #45a049;
+}

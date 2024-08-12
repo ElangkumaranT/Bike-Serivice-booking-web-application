@@ -1,0 +1,81 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+form {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    max-width: 500px;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px 0;
+    margin: 8px 0;
+    border: none;
+    border-bottom: 2px solid #4CAF50;
+    background-color: transparent;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+}
+
+input[type="text"]:focus {
+    border-bottom: 2px solid #388E3C;
+    outline: none;
+}
+
+button {
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    background-color: #ff5722;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e64a19;
+}
+
+input[type="checkbox"] {
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+label {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+}
+
+img{
+    width: 90%; /* Make the image responsive */
+    max-width: 350px; /* Set a maximum width for the image */
+    height: auto; /* Maintain the aspect ratio */
+  
+    display: block; /* Ensure the image is a block element */
+    margin: 20px auto; /* Center the image with some margin */
+}
