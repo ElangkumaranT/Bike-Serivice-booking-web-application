@@ -15,7 +15,7 @@ function Owner()
     const[re,setre]=useState(false);
 
     function delet() {
-        axios.post('http://localhost:3001/delet'+selectedId)
+        axios.post('http://bike-serivice-booking-server.vercel.app/delet'+selectedId)
         console.log(selectedId);
 
 }
@@ -30,7 +30,7 @@ function Owner()
     }
 
     useEffect(() => {
-        axios.get('http://localhost:3001/view')
+        axios.get('http://bike-serivice-booking-server.vercel.app/view')
             .then(response => {
                 setItems(response.data);
                 console.log(items);
@@ -43,7 +43,7 @@ function Owner()
 
    
     function change() {
-            axios.post('http://localhost:3001/update', {selectedId,selectedStatus,Email})
+            axios.post('http://bike-serivice-booking-server.vercel.app/update', {selectedId,selectedStatus,Email})
                 .then((users)=>{
   console.log(users)
  

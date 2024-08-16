@@ -1,6 +1,6 @@
 const mongoose =require('mongoose')
 const express = require('express')
-mongoose.connect("mongodb://localhost:27017/EKbiker");
+mongoose.connect("mongodb+srv://elangouser:elango%40143@elangocsd.vuq8ykq.mongodb.net/EKbiker");
 const userSchema = new mongoose.Schema({
     Name: {
         type: String,

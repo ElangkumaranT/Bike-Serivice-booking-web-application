@@ -18,7 +18,7 @@ console.log(formattedDate)
 const Status="Registed";
   const submit=()=>{
     Setmess(true);
-axios.post('http://localhost:3001/save',{Name,PhoneNumber,Email,Password,BikeService,OilChange,Genderalservice,Status})
+axios.post('http://bike-serivice-booking-server.vercel.app/save',{Name,PhoneNumber,Email,Password,BikeService,OilChange,Genderalservice,Status})
 .then((users)=>{
   console.log(users)
  
