@@ -1,27 +1,27 @@
-import {useNavigate} from "react-router-dom";
-import './Table.css';
+import { useNavigate } from "react-router-dom";
+import './Home.css';
+
 function Home() {
-    const Navigate=useNavigate(); 
+    const navigate = useNavigate(); 
+
     return (
-      <>  
-      <div className="body">
-    <div className="all">
-        <div className="bu1">
-         
-          <button className="bu1" onClick={()=>Navigate('/Owner')}>Owner</button>
+      <div className="home-body">
+        {/* Navbar */}
+        <div className="navbar">
+          <div className="site-title">EK Bike Service</div>
+          <ul className="nav-links">
+            <li onClick={() => navigate('/Owner')}>Owner</li>
+            <li onClick={() => navigate('/Register')}>Register</li>
+            <li onClick={() => navigate('/Login')}>Login</li>
+          </ul>
         </div>
-        <div className="bu2">
-          
-          <button className="bu2" onClick={()=>Navigate('/Register')}>Register</button>
+
+        {/* Main content */}
+        <div className="home-content">
+          <h1 className="welcome-text">Welcome to EK Bike Service</h1>
         </div>
-        <div className="bu3">
-          <button className="bu3" onClick={()=>Navigate('/Login')}>Login</button>
-          </div>
-         </div>
-         </div>
-     
-  
-  </>
+      </div>
     );
-  }
-  export default Home;
+}
+
+export default Home;

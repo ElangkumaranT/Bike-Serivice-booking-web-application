@@ -1,0 +1,90 @@
+
+.body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f1f1; 
+    margin: 0;
+    padding: 0;
+}
+
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 50px auto;
+    
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container:hover {
+    border-color: #f0f2f3; /* Darker blue border on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.form-container h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input[type="text"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn:hover {
+    background-color: #45a049; /* Darker green */
+    transform: scale(1.05);
+}
+
+/* Success Message */
+.success-message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #2ecc71; /* Green */
+}
+
+.success-message img {
+    max-width: 100px;
+    border-radius: 8px;
+}

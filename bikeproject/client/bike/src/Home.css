@@ -1,0 +1,72 @@
+/* Home body */
+.home-body {
+  font-family: 'Arial', sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  color: white;
+  background-image: url('back.png'); /* Add your image path */
+  background-size: cover; /* Ensure the image covers the entire background */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keeps the background in place while scrolling */
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  background-color: rgba(10, 11, 12, 0.8); /* Semi-transparent background */
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.site-title {
+  color: white;
+  margin-left: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin-right: 20px;
+}
+
+.nav-links li {
+  cursor: pointer;
+  color: white;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links li:hover {
+  color: #e4e5e6;
+  transform: scale(1.1);
+  text-decoration: underline;
+}
+
+/* Main content */
+.home-content {
+  margin-top: 150px;
+  text-align: center;
+}
+
+.welcome-text {
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}

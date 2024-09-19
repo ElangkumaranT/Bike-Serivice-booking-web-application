@@ -1,99 +1,86 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import axios from 'axios';
-import './Table.css';
+import './Register.css';
 import image from './tic.png';
-function Register()
-{
-  const [Name,setName]=useState();
-  const [Email,setemail]=useState();
-  const [PhoneNumber,setphone]=useState();
-  const [BikeService,setservice]=useState();
-  const [Password,setPass]=useState();
-  const [OilChange,setoil]=useState();
-  const [Genderalservice,setgenderal]=useState();
-  const [mess,Setmess]=useState(false);
-  const currentDate = new Date();
-const formattedDate = currentDate.toISOString();
-console.log(formattedDate)
-const Status="Registed";
-  const submit=()=>{
-    Setmess(true);
-axios.post('http://bike-serivice-booking-server.vercel.app/save',{Name,PhoneNumber,Email,Password,BikeService,OilChange,Genderalservice,Status})
-.then((users)=>{
-  console.log(users)
- 
-})
 
-  }
-    
+function Register() {
+    const [Name, setName] = useState('');
+    const [Email, setEmail] = useState('');
+    const [PhoneNumber, setPhone] = useState('');
+    const [BikeService, setService] = useState('');
+    const [Password, setPass] = useState('');
+    const [OilChange, setOil] = useState('');
+    const [Genderalservice, setGeneral] = useState('');
+    const [mess, setMess] = useState(false);
 
+    const Status = "Registered";
 
-if(!mess)
-{
-return (
-  <>
-        <div className="form-container">
-         
-          <form >
-          <h1>Register for Services</h1>
-            <div className="form-group">
-              <label>Name:</label>
-              <input type="text" onChange={e=>setName(e.target.value)} name="name" required />
-            </div>
-            <div className="form-group">
-              <label>Phone Number:</label>
-              <input type="text" name="phone"onChange={e=>setphone(e.target.value)} required />
-            </div>
-            <div className="form-group">
-              <label>Email:</label>
-              <input type="text" name="email" onChange={e=>setemail(e.target.value)} required />
-            </div>
-            <div className="form-group">
-              <label>Password:</label>
-              <input type="text" name="Password" onChange={e=>setPass(e.target.value)} required />
-            </div>
-            <div>
-              
-              <br></br>
-              <label>Service Type:</label>
-            
-              <div>
-                <label>
-                  <input type="checkbox" name="bikeService" onChange={e=>setservice(e.target.value)} />
-                  Bike Service
-                </label>
-              </div>
-              <div>
-                <label>
-                  <input type="checkbox" name="oilChange" onChange={e=>setoil(e.target.value)} />
-                  Oil Change
-                </label>
-              </div>
-              <div>
-                <label>
-                  <input type="checkbox" name="fullService" onChange={e=>setgenderal(e.target.value)} />
-                 Genderalservice
-                </label>
-              </div>
-              
-            </div>
-            <button type="submit" onClick={submit} className="btn">Register</button>
-          </form>
-        </div>
-        </>
-);
-}
-else
-{
-return (
-
-<>
-<img src={image} alt='no image'></img>
-  <h1>register successfully!!!</h1>
- </>
-  
-  
-);
+    const submit = (e) => {
+        e.preventDefault(); 
+        setMess(true);
+        axios.post('http://bike-serivice-booking-server.vercel.app/save', { Name, PhoneNumber, Email, Password, BikeService, OilChange, Genderalservice, Status })
+            .then((users) => {
+                console.log(users);
+            });
     }
-  }
+
+    if (!mess) {
+        return (
+          <div className='body'>
+            <div className="form-container">
+                <form>
+                    <h1>Register for Services</h1>
+                    <div className="form-group">
+                        <label>Name:</label>
+                        <input type="text" onChange={e => setName(e.target.value)} name="name" required />
+                    </div>
+                    <div className="form-group">
+                        <label>Phone Number:</label>
+                        <input type="text" name="phone" onChange={e => setPhone(e.target.value)} required />
+                    </div>
+                    <div className="form-group">
+                        <label>Email:</label>
+                        <input type="text" name="email" onChange={e => setEmail(e.target.value)} required />
+                    </div>
+                    <div className="form-group">
+                        <label>Password:</label>
+                        <input type="text" name="Password" onChange={e => setPass(e.target.value)} required />
+                    </div>
+                    <div>
+                        <br />
+                        <label>Service Type:</label>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="bikeService" onChange={e => setService(e.target.checked ? 'Bike Service' : '')} />
+                                Bike Service
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="oilChange" onChange={e => setOil(e.target.checked ? 'Oil Change' : '')} />
+                                Oil Change
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="fullService" onChange={e => setGeneral(e.target.checked ? 'General Service' : '')} />
+                                General Service
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" onClick={submit} className="btn">Register</button>
+                </form>
+            </div>
+            </div>
+        );
+    } else {
+        return (
+            <div className="success-message">
+                <img src={image} alt='Success' />
+                <h1>Registered successfully!!!</h1>
+            </div>
+        );
+    }
+}
+
 export default Register;
