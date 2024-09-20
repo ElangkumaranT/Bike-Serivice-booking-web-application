@@ -10,7 +10,7 @@ function Login() {
   const[check,setCheck]=useState(false);
 
   useEffect(() => {
-    axios.get('http://bike-serivice-booking-server.vercel.app/view')
+    axios.get('bike-serivice-booking-server-lzyfj4y2h-elangkumarans-projects.vercel.app/view')
         .then(response => {
             setItems(response.data);
             console.log(items);

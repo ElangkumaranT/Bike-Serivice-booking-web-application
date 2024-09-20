@@ -12,7 +12,7 @@ function Owner() {
     const [re, setRe] = useState(false);
 
     function delet() {
-        axios.post('http://bike-serivice-booking-server.vercel.app/delet' + selectedId)
+        axios.post('bike-serivice-booking-server-lzyfj4y2h-elangkumarans-projects.vercel.app/delet' + selectedId)
         console.log(selectedId);
     }
 
@@ -23,7 +23,7 @@ function Owner() {
     }
 
     useEffect(() => {
-        axios.get('http://bike-serivice-booking-server.vercel.app/view')
+        axios.get('bike-serivice-booking-server-lzyfj4y2h-elangkumarans-projects.vercel.app/view')
             .then(response => {
                 setItems(response.data);
                 console.log(items);
@@ -34,7 +34,7 @@ function Owner() {
     }, []);
 
     function change() {
-        axios.post('http://bike-serivice-booking-server.vercel.app/update', { selectedId, selectedStatus, Email })
+        axios.post('bike-serivice-booking-server-lzyfj4y2h-elangkumarans-projects.vercel.app/update', { selectedId, selectedStatus, Email })
             .then((users) => {
                 console.log(users)
             })

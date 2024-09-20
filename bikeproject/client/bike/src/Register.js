@@ -18,7 +18,7 @@ function Register() {
     const submit = (e) => {
         e.preventDefault(); 
         setMess(true);
-        axios.post('http://bike-serivice-booking-server.vercel.app/save', { Name, PhoneNumber, Email, Password, BikeService, OilChange, Genderalservice, Status })
+        axios.post('bike-serivice-booking-server-lzyfj4y2h-elangkumarans-projects.vercel.app/save', { Name, PhoneNumber, Email, Password, BikeService, OilChange, Genderalservice, Status })
             .then((users) => {
                 console.log(users);
             });

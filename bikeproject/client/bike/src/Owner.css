@@ -1,169 +1,115 @@
-/* General styling */
-.total {
-    font-family: 'Arial', sans-serif;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    position: relative;
-    color: white;
-    background-image: url('register.jpg'); /* Add your image path */
-    background-size: cover; /* Ensure the image covers the entire background */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat;
-    background-attachment: fixed; /* Keeps the background in place while scrolling */
-  }
-
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4; /* Light grey background for the whole page */
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8; /* Light background color for a clean look */
     margin: 0;
     padding: 0;
 }
 
-/* Owner Page */
-.owner-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-/* Login Section */
-.login-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    margin: 50px auto;
-    border: 2px solid #3498db; /* Blue border */
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.login-section:hover {
-    border-color: #2980b9; /* Darker blue border on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.login-section h1 {
-    font-size: 2rem;
+h1 {
     color: #333;
-    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* Login Section Styling */
+.total {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
 }
 
 .login-section label {
-    font-size: 1rem;
-    margin-right: 10px;
+    font-size: 18px;
+    display: block;
+    margin-bottom: 10px;
 }
 
-.login-section input {
+.login-section input[type="text"] {
+    width: 100%;
     padding: 10px;
-    font-size: 1rem;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 100%;
-    box-sizing: border-box;
 }
 
-.login-section .button {
-    padding: 10px 20px;
-    font-size: 1rem;
+.button {
+    background-color: #4CAF50;
     color: white;
-    background-color: #4CAF50; /* Green */
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
     width: 100%;
-    box-sizing: border-box;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
-.login-section .button:hover {
-    background-color: #45a049; /* Darker green */
-    transform: scale(1.05);
+.button:hover {
+    background-color: #45a049;
 }
 
-/* Table Section */
+/* Table Section Styling */
 .table-section {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.table-section h1 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #333;
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    border-radius: 10px;
 }
 
 .table-section table {
     width: 100%;
     border-collapse: collapse;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
 }
 
-.table-section th, .table-section td {
-    padding: 15px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
+.table-section table th,
+.table-section table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
 }
 
-.table-section th {
+.table-section table th {
     background-color: #f2f2f2;
-    font-weight: bold;
 }
 
-.table-section tr:hover {
-    background-color: #f1f1f1;
+.table-section table td {
+    background-color: #fafafa;
 }
 
 .table-section select {
     padding: 5px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
 .table-section button {
-    padding: 10px 15px;
-    font-size: 1rem;
+    background-color: #007BFF;
     color: white;
     border: none;
+    padding: 6px 12px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s;
 }
 
-.table-section button:nth-child(1) {
-    background-color: #3498db; /* Blue */
+.table-section button:hover {
+    background-color: #0056b3;
 }
 
-.table-section button:nth-child(1):hover {
-    background-color: #2980b9; /* Darker blue */
-}
-
-.table-section button:nth-child(2) {
-    background-color: #e74c3c; /* Red */
-}
-
-.table-section button:nth-child(2):hover {
-    background-color: #c0392b; /* Darker red */
-}
-
-/* Update Notification */
+/* Update Notification Styling */
 .update-notification {
     text-align: center;
     margin-top: 20px;
-    font-size: 1.5rem;
-    color: #2ecc71; /* Green */
+    color: green;
 }

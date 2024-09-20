@@ -10,16 +10,13 @@ function Home() {
         <div className="navbar">
           <div className="site-title">EK Bike Service</div>
           <ul className="nav-links">
+          <li onClick={() => navigate('/')}>Home</li>
             <li onClick={() => navigate('/Owner')}>Owner</li>
             <li onClick={() => navigate('/Register')}>Register</li>
             <li onClick={() => navigate('/Login')}>Login</li>
           </ul>
         </div>
 
-        {/* Main content */}
-        <div className="home-content">
-          <h1 className="welcome-text">Welcome to EK Bike Service</h1>
-        </div>
       </div>
     );
 }
