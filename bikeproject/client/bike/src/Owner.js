@@ -12,7 +12,7 @@ function Owner() {
     const [re, setRe] = useState(false);
 
     function delet() {
-        axios.post('bike-serivice-booking-server-lzyfj4y2h-elangkumarans-projects.vercel.app/delet' + selectedId)
+        axios.post('https://bike-serivice-booking-server.vercel.app//delet' + selectedId)
         console.log(selectedId);
     }
 
